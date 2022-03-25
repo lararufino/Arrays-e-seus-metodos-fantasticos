@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+</head>
+<body>
+    <script>
+        //3. Drofo e Topper estão em uma aventura mágica. Faça um programa que contenha um inventário para cada um dos dois aventureiros - esse inventário será um array. 
+
+        //Drofo terá um anel da invisibilidade, dois pares de botas mágicas, uma poção do sono e duas poções da inocência em seu inventário e nessa ordem. 
+
+        //Torper terá uma capa da invisibilidade, uma pedra do despertar,  uma varinha das varinhas, uma poção da inocência e duas poções da mentira, poção anti-inteligência e nessa ordem.
+
+        //No meio de sua jornada, Torper consumiu uma das poções da mentira, perdeu sua pedra e ganhou um par de botas mágicas do Drofo, achou um escudo mágico e uma espada mágica. 
+
+        //Descreva cada uma das ações acima. utilizando código (utilize comentários para ficar mais claro). 
+        
+        //No meio da sua jornada, Drofo, ganhou mais uma bota mágica, usou sua poção do sono e consumiu a poção anti-inteligência do Torper, encontrou um ovo de dragão e uma coxinha.Descreva cada uma das ações acima. utilizando código.Exiba o resultado final de cada um dos inventários utilizando "document.write"
+
+        //começo do inventário
+        var array_drofo = ["Anel da invisibilidade", " Botas mágicas", " Botas mágicas", " Poção do sono", " Poção de inocência", " Poção da inocência"];
+        var array_topper = [" Capa da invisibilidade", " Pedra do despertar", " Varinha das varinhas", " Poção da inocência", " Poção da mentira", " Poção da mentira", " Poção anti-inteligência"]
+
+        //no meio da jornada de Topper
+        array_topper.splice(4,1); //consumiu uma poção da mentira
+        array_topper.splice(1,1); //perdeu a pedra
+        array_topper.push(" Botas mágicas"); //ganhou do Drofo
+        array_topper.push(" Escudo mágico", " Espada mágica"); //achou esses dois
+        array_topper.splice(3,1); //Drofo consumiu sua poção de anti-inteligência
+
+        //no meio da jornada de Drofo
+        array_drofo.push(" Botas mágicas"); //ganhou
+        array_drofo.splice(3,1); //usou poção do sono
+        array_drofo.push(" Ovo do dragão", " Coxinha"); //encontrou esse itens
+
+        //inventário final
+        document.write("O resultado final do inventário do Topper ficou: " + array_topper + "<br/> O resultado final do inventário do Drofo ficou: " + array_drofo);
+
+
+
+    </script>
+</body>
+</html>
